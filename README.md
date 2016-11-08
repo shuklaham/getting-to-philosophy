@@ -36,7 +36,7 @@ For 10 pages, comparing the number of http requests without hashing and with has
 * Percentage of random pages that land to philosophy page
 * Total number of http requests
 
-Clearly **hashing reduces the number of http requests**.
+**Clearly hashing reduces the number of http requests**.
 
 *Note:* Don't give large number of random pages as an argument to [wikipedia_philosophy.py](https://github.com/shuklaham/getting-to-philosophy/blob/master/wikipedia_philosophy.py) as it is very slow and has been implemented without hashing.
 
@@ -85,13 +85,13 @@ Installing dependencies:
 pip install -r requirements.txt
 ```
 
-Running wikipedia_philosophy.py:
+**Running wikipedia_philosophy.py**: python wikipedia_philosophy.py <num>
 
 ```
 python wikipedia_philosophy.py 10
 ```
 
-Running wikipedia_philosophy_hashing.py:
+**Running wikipedia_philosophy_hashing.py**: python wikipedia_philosophy_hashing.py <num>
 
 ```
 python wikipedia_philosophy_hashing.py 10
@@ -102,8 +102,20 @@ OR
 python wikipedia_philosophy_hashing.py 500
 ```
 
-Running test.py:
+**Running test.py**: python test.py <url>
 
 ```
 python test.py https://en.wikipedia.org/wiki/Design_Patterns
+```
+
+Deactivate the virtual environment:
+
+```
+deactivate
+```
+
+Delete the environment folder:
+
+```
+rm -rf wikiproject
 ```
