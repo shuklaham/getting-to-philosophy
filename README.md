@@ -12,8 +12,9 @@ subsequent article.
 Here I am defining main body as paragraph text mentioned after first heading. Only consecutive \<p\> tags
 are considered. For example: for given link (https://en.wikipedia.org/wiki/Jonathan_Wells_(American_football)), main body is defined as following:
 
+```
 Jonathan Wells (born July 21, 1979) is a former American football running back. He played college football at Ohio State University and professionally in the National Football League (NFL) with the Houston Texans.
-
+```
 
 I also gather statistics such as: 
 
