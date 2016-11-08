@@ -261,6 +261,6 @@ if __name__ == "__main__":
             plt.hist(x, normed=True, bins=30)
             plt.ylabel('No. of hops')
             plt.show()
-            plt.savefig('path-lengths-with-hashing.png')
+            # plt.savefig('path-lengths-with-hashing.png')
     else:
         print 'No. of random pages is', randomPages
