@@ -54,11 +54,11 @@ For 10 pages, comparing the number of http requests without hashing and with has
 I use one dictionary called 'parent' and one set called 'deadends'. 
 
 Dictionary 'parent' consists of all those topics which end up to philosophy. Dictionary 'parent' can be defined as follows:
-Suppose we obtain this path: Knowledge > Awareness > Quality > Philosophy. Then this would be stored in dictionary parent as :
-parent['Knowledge'] = 'Awareness'
-parent['Awareness'] = 'Quality'
-parent['Quality'] = 'Philosophy'
-parent['Philosophy'] = None
+Suppose we obtain this path: Knowledge > Awareness > Quality > Philosophy. Then this would be stored in dictionary parent as : <br />
+parent['Knowledge'] = 'Awareness' <br />
+parent['Awareness'] = 'Quality' <br />
+parent['Quality'] = 'Philosophy' <br />
+parent['Philosophy'] = None <br />
 
 This way while performing another random topic pat search, if at any point the current topic falls in parent dictionary, that ensures that we dont need to make further http requests. Thus saving time. 
 
