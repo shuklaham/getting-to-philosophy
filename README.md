@@ -24,17 +24,17 @@ For 10 pages, comparing the number of http requests without hashing and with has
 
 **Without hashing**
 
-* Average number of hops 
-* Median number of hops
-* Percentage of random pages that land to philosophy page
-* Total number of http requests
+* Average number of hops : 12.4
+* Median number of hops : 13.0
+* Percentage of random pages that land to philosophy page : 70.0 %
+* Total number of http requests : 104
 
 **With hashing**
 
-* Average number of hops 
-* Median number of hops
-* Percentage of random pages that land to philosophy page
-* Total number of http requests
+* Average number of hops : 12.875
+* Median number of hops : 13.0
+* Percentage of random pages that land to philosophy page: 80.0 %
+* Total number of http requests : 82
 
 **Clearly hashing reduces the number of http requests**.
 

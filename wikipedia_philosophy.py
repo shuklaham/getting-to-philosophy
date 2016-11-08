@@ -181,9 +181,10 @@ if __name__ == "__main__":
     totalTime = time() - begin
     print
     if randomPages > 0:
+        print 'Number of pages that landed to philosophy :', cp
         print 'Percentage pages landing to philosophy :', float(cp)/randomPages*100, '%'
         if cp != 0:
-            print 'Average hops :', float(s) / cp
+            print 'Average hops for pages that landed to philosophy:', float(s) / cp
         else:
             print 'Average hops :', 0 , '(No page landed to philosophy). '
 
@@ -191,11 +192,11 @@ if __name__ == "__main__":
         l = len(pathlengths)
         pathlengths.sort()
         if l !=0 and l%2 == 0:
-            print 'Median of',randomPages, 'path lengths (number of hops) is', float(pathlengths[(l/2)-1]+pathlengths[(l/2)])/2
+            print 'Median of',l, ' random pages (that landed to philosophy) path lengths (number of hops) is', float(pathlengths[(l/2)-1]+pathlengths[(l/2)])/2
         elif l != 0 and l%2 != 0:
-            print 'Median of', randomPages, 'path lengths (number of hops) is', float(pathlengths[(l/2)])
+            print 'Median hops for pages that landed to philosophy: ', float(pathlengths[(l/2)])
         else:
-            print 'Median of', randomPages, 'path lengths (number of hops) is', 0 , '(No page landed to philosophy). '
+            print 'Median hops for pages that landed to philosophy: is', 0 , '(No page landed to philosophy). '
         print 'Total time taken for', randomPages, 'random pages :', totalTime,'seconds','\n'
         print 'Total number of http requests made for all random pages :', h.httpreqs
     else:
