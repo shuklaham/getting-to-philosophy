@@ -49,6 +49,23 @@ For 10 pages, comparing the number of http requests without hashing and with has
 
 **Clearly hashing reduces the number of http requests**.
 
+**How hashing has been used ?**
+
+I use one dictionary called 'parent' and one set called 'deadends'. 
+
+Dictionary 'parent' consists of all those topics which end up to philosophy. Dictionary 'parent' can be defined as follows:
+Suppose we obtain this path: Knowledge > Awareness > Quality > Philosophy. Then this would be stored in dictionary parent as :
+parent['Knowledge'] = 'Awareness'
+parent['Awareness'] = 'Quality'
+parent['Quality'] = 'Philosophy'
+parent['Philosophy'] = None
+
+This way while performing another random topic pat search, if at any point the current topic falls in parent dictionary, that ensures that we dont need to make further http requests. Thus saving time. 
+
+Deadends are caused in case of loops, no links in main body as defined above, first link being red link. I keep adding such wikipedia topics in deadends set. If during any random request path, we fall in deadends set, all the topics traversed till then are added to deadends set. 
+
+
+
 *Note:* Don't give large number of random pages as an argument to [wikipedia_philosophy.py](https://github.com/shuklaham/getting-to-philosophy/blob/master/wikipedia_philosophy.py) as it is very slow and has been implemented without hashing.
 
 ## Code description 

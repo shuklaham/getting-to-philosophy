@@ -31,8 +31,6 @@ class HopToPhilosophyHash(object):
         self.parent = {}
         self.parent['Philosophy'] = None
         self.deadends = set()
-        self.distanceFromPhilosophy = {}
-        self.distanceFromPhilosophy['Philosophy'] = 0
         self.httpreqs = 0
 
     def getHops(self,url="https://en.wikipedia.org/wiki/Special:Random"):
