@@ -85,7 +85,7 @@ Installing dependencies:
 pip install -r requirements.txt
 ```
 
-**Running wikipedia_philosophy.py**: python wikipedia_philosophy.py <num>
+**Running wikipedia_philosophy.py**: python wikipedia_philosophy.py \<num\>
 
 ```
 python wikipedia_philosophy.py 10
