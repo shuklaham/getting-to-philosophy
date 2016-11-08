@@ -1,9 +1,21 @@
 from wikipedia_philosophy import HopToPhilosophySimple
-
+import sys
 from wikipedia_philosophy_hashing import HopToPhilosophyHash
 
+inp = sys.argv
+url = inp[1]
+
 h1 = HopToPhilosophySimple()
-print h1.getHops(url ="https://en.wikipedia.org/wiki/Design_pattern")
+op = h1.getHops(url =url)
+if op:
+    print op
+else:
+    print 'Its a deadend'
+
 
 h2 = HopToPhilosophyHash()
-print h2.getHops(url="https://en.wikipedia.org/wiki/Design_pattern")
+op = h2.getHops(url=url)
+if op:
+    print op
+else:
+    print 'Its a deadend'
