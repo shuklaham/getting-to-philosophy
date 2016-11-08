@@ -102,7 +102,7 @@ OR
 python wikipedia_philosophy_hashing.py 500
 ```
 
-**Running test.py**: python test.py \<num\>
+**Running test.py**: python test.py \<url\>
 
 ```
 python test.py https://en.wikipedia.org/wiki/Design_Patterns
