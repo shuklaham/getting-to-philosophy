@@ -33,10 +33,12 @@ class HopToPhilosophyHash(object):
         self.deadends = set()
         self.distanceFromPhilosophy = {}
         self.distanceFromPhilosophy['Philosophy'] = 0
+        self.httpreqs = 0
 
     def getHops(self,url="https://en.wikipedia.org/wiki/Special:Random"):
         countHops = 0 # number of hops
         r = requests.get(url)
+        self.httpreqs += 1
         # print r.status_code
         print r.url
 
@@ -123,6 +125,7 @@ class HopToPhilosophyHash(object):
                     url = 'http://en.wikipedia.org' + firstLinkWithWiki.get('href')
                     print(url)
                     r = requests.get(url)  # Make new request
+                    self.httpreqs += 1
                     soup = BeautifulSoup(r.text,"lxml")
                     countHops += 1
                     pageStatus[wikiLink] = True
@@ -158,6 +161,7 @@ class HopToPhilosophyHash(object):
                         print(url)
 
                         r = requests.get(url)  # Make new request
+                        self.httpreqs += 1
                         soup = BeautifulSoup(r.text,"lxml")
                         countHops += 1
                         pageStatus[wikiLink] = True
@@ -250,7 +254,7 @@ if __name__ == "__main__":
         else:
             print 'Median of', randomPages, 'path lengths (number of hops) is', 0, '(No page landed to philosophy). '
         print 'Total time taken for',randomPages, 'random pages :', totalTime,'seconds','\n'
-
+        print 'Total number of http requests made for all random pages :', h.httpreqs
         if randomPages == 500:
             x = np.asarray(pathlengths)
             plt.hist(x, normed=True, bins=30)
