@@ -91,7 +91,7 @@ pip install -r requirements.txt
 python wikipedia_philosophy.py 10
 ```
 
-**Running wikipedia_philosophy_hashing.py**: python wikipedia_philosophy_hashing.py <num>
+**Running wikipedia_philosophy_hashing.py**: python wikipedia_philosophy_hashing.py \<num\>
 
 ```
 python wikipedia_philosophy_hashing.py 10
@@ -102,7 +102,7 @@ OR
 python wikipedia_philosophy_hashing.py 500
 ```
 
-**Running test.py**: python test.py <url>
+**Running test.py**: python test.py \<num\>
 
 ```
 python test.py https://en.wikipedia.org/wiki/Design_Patterns
