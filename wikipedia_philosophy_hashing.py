@@ -44,7 +44,7 @@ class HopToPhilosophyHash(object):
         # print firstTopic
 
         if firstTopic == 'Philosophy':
-            return firstTopic,True
+            return 1
         soup = BeautifulSoup(r.text,"lxml")
 
         localPath = []
